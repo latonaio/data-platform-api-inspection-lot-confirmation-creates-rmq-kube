@@ -1,12 +1,11 @@
 package dpfm_api_processing_formatter
 
 type HeaderUpdates struct {
-	InspectionLotConfirmation           int     `json:"InspectionLotConfirmation"`
-	InspectionLotConfirmationHeaderText *string `json:"InspectionLotConfirmationHeaderText"`
-}
-
-type InspectionUpdates struct {
-	InspectionLotConfirmation               int     `json:"InspectionLotConfirmation"`
-	Inspection                              int     `json:"Inspection"`
-	InspectionLotConfirmationInspectionText *string `json:"InspectionLotConfirmationInspectionText"`
+	InspectionLot           int     `json:"InspectionLot"`
+	Operations              int     `json:"Operations"`
+	OperationsItem          int     `json:"OperationsItem"`
+	OperationID             int     `json:"OperationID"`
+	ConfirmationCountingID  int     `json:"ConfirmationCountingID"`
+	ConfirmationText        *string `json:"ConfirmationText"`
+	OperationVarianceReason *string `json:"OperationVarianceReason"`
 }

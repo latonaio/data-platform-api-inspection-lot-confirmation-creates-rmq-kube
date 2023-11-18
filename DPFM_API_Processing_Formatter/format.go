@@ -6,7 +6,12 @@ func ConvertToHeaderUpdates(header dpfm_api_input_reader.Header) *HeaderUpdates 
 	data := header
 
 	return &HeaderUpdates{
-		InspectionLotConfirmation:           *&data.InspectionLotConfirmation,
-		InspectionLotConfirmationHeaderText: data.InspectionLotConfirmationHeaderText,
+		InspectionLot:           *&data.InspectionLot,
+		Operations:              data.Operations,
+		OperationsItem:          data.OperationsItem,
+		OperationID:             data.OperationID,
+		ConfirmationCountingID:  data.ConfirmationCountingID,
+		ConfirmationText:        data.ConfirmationText,
+		OperationVarianceReason: data.OperationVarianceReason,
 	}
 }
